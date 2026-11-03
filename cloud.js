@@ -1,4 +1,4 @@
-export default class Cloud {
+class Cloud {
   constructor(scene) {
     this.scene = scene;
     //using an image instead of a sprite because this will

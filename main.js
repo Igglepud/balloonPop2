@@ -1,12 +1,9 @@
-import gameScene from "/game.js";
-import preloadScene from "/preload.js";
-import titleScene from "/title.js";
 // set game configuration
 let config = {
   type: Phaser.AUTO,
   width: 1600,
   height: 900,
-  scene: [preloadScene, titleScene, gameScene],
+  scene: [preloadScene, titleScene,gameScene],
   pixelArt: false,
   scale: {
     mode: Phaser.Scale.FIT,

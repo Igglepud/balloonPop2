@@ -1,4 +1,4 @@
-export default class Balloon {
+class Balloon {
   //you must have a constructor in order to use "new balloon()" in another scene
   constructor(scene) {
     //attach the scene to the class for future reference

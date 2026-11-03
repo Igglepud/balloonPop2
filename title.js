@@ -1,4 +1,4 @@
-export default class titleScene extends Phaser.Scene {
+class titleScene extends Phaser.Scene {
   constructor() {
     super("Title");
   }
@@ -37,7 +37,7 @@ export default class titleScene extends Phaser.Scene {
 
       })
 
-
+    this.add.image(100,400,'balloons','balloon_01').setTint(0xff0000)
   };
 
   update() {}

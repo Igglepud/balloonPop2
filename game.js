@@ -1,6 +1,4 @@
-import Balloon from "/balloon.js";
-import Cloud from "/cloud.js";
-export default class gameScene extends Phaser.Scene {
+class gameScene extends Phaser.Scene {
   constructor() {
     super("Game");
   }

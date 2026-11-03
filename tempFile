@@ -1,0 +1,38 @@
+class titleScene extends Phaser.Scene {
+  constructor() {
+    super("Title");
+  }
+  
+  preload = function () {
+
+  };
+  create = function () {
+  
+    this.add.text(800, 450, "Balloon Pop", {fontSize:"128px"} ).setOrigin(.5);
+
+    this.clickText= this.add.text(800, 600, "Click to Start", {fontSize:"72px"} ).setOrigin(.5);
+
+//create blink
+      this.tweens.add({
+        targets: this.clickText,//thing to apply tween to
+        alpha: 0, //you can put any number of properties here
+        duration: 1000,//length of tween in miliseconds
+        ease: "Power2",
+        yoyo: true,//play in reverse after playing forward
+        repeat: -1,//loop forever
+      })
+         this.input.on(
+      "pointerdown",
+      function () {
+        this.scene.start("Game");
+      },
+      this
+    );
+
+    this.add.image(100,400,'balloons','balloon_01').setTint(0xff0000)
+
+
+  };
+
+  update() {}
+}
